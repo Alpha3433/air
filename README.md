@@ -1,85 +1,96 @@
-# FÜM — "The Quit Pack" Landing Page
+# FÜM — "Journey Pack" Landing Page
 
-A standalone, responsive landing page that reproduces the FÜM **Quit Pack**
-product page — same layout, section flow, colours, and styling — built with
+A standalone, responsive landing page that reproduces the FÜM **Journey Pack**
+product page — same layout, section flow, colours, and typography — built with
 plain HTML, CSS, and vanilla JavaScript. No build step, no dependencies.
 
-> This is a **design demo**. It is not affiliated with FÜM and is not a live
-> store. All copy, prices, and imagery are placeholders.
+> Design demo. Not affiliated with FÜM and not a live store. Copy, prices, and
+> imagery are placeholders modeled on the real page.
 
 ---
 
 ## Quick start
 
-Just open the file in a browser:
-
 ```bash
-# either double-click index.html, or serve it locally:
-python3 -m http.server 8000
-# then visit http://localhost:8000
+# double-click index.html, or serve locally:
+python3 -m http.server 8000   # → http://localhost:8000
 ```
 
-## What's inside
+## Files
 
 ```
 index.html              # full page markup
-assets/css/styles.css   # all styling + the brand palette (CSS variables)
-assets/js/main.js       # plan selector, price math, accordion, gallery, reviews
-assets/img/             # (drop real product/lifestyle images here)
+assets/css/styles.css   # brand palette (CSS variables) + all styling
+assets/js/main.js       # configurator, price math, gallery, reviews
+assets/img/             # drop real product / lifestyle / review photos here
 ```
 
 ## Sections (top → bottom)
 
-1. Marquee announcement bar
-2. Sticky header + nav + fixed "Mystery Gift" side tab
-3. Product hero — image gallery + buy box (plan selector, refill add-on, ATC, accordion)
-4. "Watch Before You Buy" video
-5. "Your Pack Includes…" checklist + gold *Welcome to the Good Side* box
+1. Marquee announcement bar (Free Shipping · Save 30% · Guarantee)
+2. Sticky header — left nav (Journey Pack · Cores Club · Shop All · Science · Find a store · Blog), centered FÜM logo, cart
+3. **Product hero** — image gallery + buy-box **configurator**:
+   - Step 1: device (Prominent / Solano +$30 / Quit Together +$104)
+   - Step 2: flavor cores grid — pick 3 (gates the Add-to-Cart button)
+   - Step 3: optional accessories
+   - One-time vs **Subscribe & Save 30%**, live total
+4. Dark-green feature strip (Rewires Habits · Keeps Hands Busy · Zero Nicotine · No Vapor · Use Anywhere)
+5. "Your Pack Includes…" + lemon *Welcome to the Good Side* box
 6. Lifestyle banner
-7. Features triptych (Chewable / Flavor / Fidgety / Distraction) + "Stop Ignoring the Habit"
-8. "No Batteries or Vapor?" diagram
-9. "Not Quitting Is Too Expensive" cost comparison (dark navy)
-10. "Quit Vaping for Good"
-11. UGC photo strip
-12. "We're here to stick with you. Not to your lungs."
-13. "Trusted by 1 Million+ Happy Customers" reviews
-14. Final CTA + footer
+7. Features triptych (Chewable / Flavor / Fidgety / Distraction) + "Stop *Ignoring* the Habit"
+8. "No Batteries or Vapor?" — mint section with cutaway diagram
+9. Split row: "Quit Vaping for Good" + teal "Not Quitting Is Too Expensive" ($2,000 / $800 / $150)
+10. UGC photo grid
+11. "We're here to stick with you. Not to your lungs."
+12. "Trusted by 1 Million+ Happy Customers" reviews (4,225)
+13. Final CTA + footer (newsletter, nav, patent line, Design by note)
 
-## Brand palette
+## Brand palette (lifted from the real page)
 
-All colours live as CSS variables at the top of `assets/css/styles.css`:
+CSS variables at the top of `assets/css/styles.css`:
 
 | Token | Hex | Use |
 |---|---|---|
-| `--cream` | `#F4EEE3` | page background |
-| `--forest` | `#3C4A37` | primary CTA / brand green |
-| `--sage` | `#93A579` | side tab, accents |
-| `--gold` | `#EDB836` | "good side" box, badges |
-| `--navy` | `#15273B` | cost / footer sections |
-| `--blue` | `#2E6BE6` | "Not to your lungs" accent |
-| `--rasp` | `#DB5C84` | raspberry highlight |
+| `--forest` | `#3f603f` | primary CTA / brand green |
+| `--teal` | `#416157` | dark cost section |
+| `--ink` | `#131313` | header text / footer |
+| `--cream` | `#fdfcf5` | page background |
+| `--lemon` | `#f7f782` | "good side" box, subscribe CTA |
+| `--lime` | `#f0f5d7` | configurator panel |
+| `--mint` | `#c3e1d8` | "no batteries" section |
+| `--peach` | `#fdd7b6` | warm accent panels |
+| `--red` | `#ff2b49` | sale badges |
 
-Change the whole look by editing those variables.
+**Fonts:** [Lexend](https://fonts.google.com/specimen/Lexend) (primary) +
+[Lekton](https://fonts.google.com/specimen/Lekton) (mono labels/specs) — the
+same families the real site uses, loaded from Google Fonts with system
+fallbacks.
 
 ## Swapping in real images
 
-The coloured blocks are placeholders driven by `.ph` classes (see the
-*PLACEHOLDER IMAGE SYSTEM* block in the CSS). To use real photos, either:
+The coloured blocks are placeholders driven by `.ph--*` classes (see the
+*PLACEHOLDER IMAGE SYSTEM* block in the CSS). Set a `background-image` on the
+relevant class, or replace the `<div class="ph …">` with an `<img>`.
 
-- set a `background-image` on the relevant `.ph--*` class, or
-- replace the `<div class="ph …">` with an `<img>` and remove the `ph` class.
+## Porting to Shopify
 
-## Porting to Shopify (later)
+Plain HTML, so it moves cleanly into a theme:
 
-This page is plain HTML, so it's easy to move into Shopify:
+- Paste markup into a **Custom Liquid** section/block; move `styles.css` /
+  `main.js` into the theme's `assets/` and reference with
+  `{{ 'styles.css' | asset_url | stylesheet_tag }}`.
+- Replace the hard-coded device/accessory prices with Shopify variant data
+  (`{{ product.variants }}`) and wire **Add to Cart** to the Ajax Cart API.
+  The "pick 3 cores" gating maps to a line-item-property / bundle app.
+- Expose editable text/images via section `schema` settings for the customizer.
 
-- Paste the markup into a **Custom Liquid** section/block, or a page built
-  with a section-based theme, and move `styles.css` / `main.js` into the
-  theme's `assets/` (reference them with `{{ 'styles.css' | asset_url | stylesheet_tag }}`).
-- Replace the hard-coded plan prices with Shopify variant data
-  (`{{ product.variants }}`) and wire the **Add to Cart** button to
-  `/cart/add` or the Ajax Cart API.
-- Convert the editable text/images into section `schema` settings so they're
-  editable from the theme customizer.
+Ask and I can generate the `sections/journey-pack.liquid` version next.
 
-Ask and I can generate the `sections/quit-pack.liquid` version next.
+## Verified behavior
+
+Run in a headless DOM (jsdom) — 19/19 checks pass:
+device price changes, accessory add-ons, subscribe 30% discount, the
+choose-3-cores gating (incl. bumping the oldest pick on a 4th), live ATC
+total, cart counter, gallery swap, reviews load-more, and mobile nav — with
+zero JS runtime errors. A pixel screenshot couldn't be generated here because
+the sandbox blocks browser-binary downloads.
