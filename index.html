@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FÜM — The Quit Pack | Quit Vaping for Good</title>
+  <meta name="description" content="Break the habit, not your lungs. FÜM is a natural inhaler that gives your hands and mouth something to do — no nicotine, no vapor, no batteries." />
+
+  <!-- Fonts (graceful fallback to system fonts if offline) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Caveat:wght@600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+  <!-- ============================================================= -->
+  <!--  ANNOUNCEMENT BAR (marquee)                                    -->
+  <!-- ============================================================= -->
+  <div class="announce">
+    <div class="announce__track">
+      <!-- duplicated set for seamless loop -->
+      <span class="announce__item">🎁 Buy One, Gift One Free</span>
+      <span class="announce__dot">•</span>
+      <span class="announce__item">Free Shipping On Orders Over $60</span>
+      <span class="announce__dot">•</span>
+      <span class="announce__item">90-Day Money-Back Guarantee</span>
+      <span class="announce__dot">•</span>
+      <span class="announce__item">Free Mystery Gift With Every Order</span>
+      <span class="announce__dot">•</span>
+      <span class="announce__item">🎁 Buy One, Gift One Free</span>
+      <span class="announce__dot">•</span>
+      <span class="announce__item">Free Shipping On Orders Over $60</span>
+      <span class="announce__dot">•</span>
+      <span class="announce__item">90-Day Money-Back Guarantee</span>
+      <span class="announce__dot">•</span>
+      <span class="announce__item">Free Mystery Gift With Every Order</span>
+      <span class="announce__dot">•</span>
+    </div>
+  </div>
+
+  <!-- ============================================================= -->
+  <!--  HEADER / NAV                                                  -->
+  <!-- ============================================================= -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <button class="header__burger" id="burger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <a href="#" class="logo">
+        <span class="logo__mark">FÜM</span>
+        <span class="logo__tag">The Good Habit</span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="#includes">Shop</a>
+        <a href="#how">How It Works</a>
+        <a href="#story">Our Story</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <div class="header__actions">
+        <button class="icon-btn" aria-label="Search">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        </button>
+        <button class="icon-btn" aria-label="Account">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
+        </button>
+        <button class="icon-btn cart" aria-label="Cart">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6h15l-1.5 9h-12z"/><path d="M6 6 5 3H2"/><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/></svg>
+          <span class="cart__count">1</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================================= -->
+  <!--  FIXED SIDE TAB (Mystery Gift)                                 -->
+  <!-- ============================================================= -->
+  <button class="side-tab" aria-label="Spin the wheel for a mystery gift">
+    <span>🎁 Mystery Gift</span>
+  </button>
+
+  <main>
+
+    <!-- ========================================================= -->
+    <!--  HERO / PRODUCT                                            -->
+    <!-- ========================================================= -->
+    <section class="product container">
+      <!-- LEFT: gallery -->
+      <div class="gallery">
+        <div class="gallery__main ph ph--kit" id="galleryMain" data-label="The Quit Pack — full kit">
+          <span class="ph__tag">Product hero image</span>
+        </div>
+        <div class="gallery__thumbs">
+          <button class="thumb ph ph--kit is-active" data-img="kit" data-label="Kit"></button>
+          <button class="thumb ph ph--device" data-img="device" data-label="Device"></button>
+          <button class="thumb ph ph--cores" data-img="cores" data-label="Cores"></button>
+          <button class="thumb ph ph--lifestyle1" data-img="life" data-label="Lifestyle"></button>
+          <button class="thumb ph ph--box" data-img="box" data-label="Box"></button>
+        </div>
+
+        <!-- feature chips -->
+        <ul class="feat-chips">
+          <li><span class="feat-chips__ico">🚭</span> No Vapor or Batteries</li>
+          <li><span class="feat-chips__ico">🌀</span> Ridiculously Fidgety</li>
+          <li><span class="feat-chips__ico">🧠</span> Distracts From Cravings</li>
+        </ul>
+      </div>
+
+      <!-- RIGHT: buy box -->
+      <div class="buybox" id="buybox">
+        <div class="rating">
+          <span class="stars">★★★★★</span>
+          <span class="rating__txt">Rated 4.8 · <a href="#reviews">17,000+ Reviews</a></span>
+        </div>
+
+        <h1 class="buybox__title">Quit Pack</h1>
+        <p class="buybox__sub">Break the habit — not your lungs. A natural inhaler that finally gives your
+          hands and mouth something to do, minus the nicotine, vapor, and batteries.</p>
+
+        <div class="price">
+          <span class="price__now" id="priceLabel">$88.55</span>
+          <span class="price__was">$109.99</span>
+          <span class="price__save">Save 20%</span>
+        </div>
+
+        <!-- Plan options -->
+        <div class="plans" id="plans">
+          <label class="plan">
+            <input type="radio" name="plan" value="59.99" data-name="14 Day Starter" />
+            <span class="plan__body">
+              <span class="plan__head">
+                <span class="plan__name">14 Day Starter</span>
+                <span class="plan__price">$59.99</span>
+              </span>
+              <span class="plan__desc">1 Flavored Device · Beginner-Friendly Flavors</span>
+            </span>
+          </label>
+
+          <label class="plan">
+            <input type="radio" name="plan" value="74.99" data-name="30 Day Quit Kit" />
+            <span class="badge badge--best">Best Value</span>
+            <span class="plan__body">
+              <span class="plan__head">
+                <span class="plan__name">30 Day Quit Kit</span>
+                <span class="plan__price">$74.99</span>
+              </span>
+              <span class="plan__desc">1 Flavored Device · Beginner-Friendly Flavors</span>
+            </span>
+          </label>
+
+          <label class="plan is-selected">
+            <input type="radio" name="plan" value="88.55" data-name="60 Day Complete Kit" checked />
+            <span class="badge badge--pop">Most Popular</span>
+            <span class="plan__body">
+              <span class="plan__head">
+                <span class="plan__name">60 Day Complete Kit</span>
+                <span class="plan__price">$88.55</span>
+              </span>
+              <span class="plan__desc">1 Flavored Device · Beginner-Friendly Flavors</span>
+            </span>
+          </label>
+        </div>
+
+        <!-- Add-on -->
+        <label class="addon" id="addon">
+          <input type="checkbox" id="addonCheck" data-price="39.99" />
+          <span class="addon__box"></span>
+          <span class="addon__txt">
+            <strong>Include Refill Pods &amp; Save</strong>
+            <small>3 Flavor Packs · auto-restock so you never run out</small>
+          </span>
+          <span class="addon__price">+$39.99</span>
+        </label>
+
+        <button class="atc" id="atc">
+          Add to Cart <span class="atc__price" id="atcPrice">— $88.55</span>
+        </button>
+
+        <button class="onetime" id="onetime">No Thanks, One-Time Purchase</button>
+
+        <div class="subnote">
+          <span class="subnote__dot"></span>
+          Subscribe &amp; save 15% — skip, pause or cancel anytime.
+        </div>
+
+        <!-- trust row -->
+        <ul class="trust">
+          <li>🚚 Free Shipping</li>
+          <li>🛡️ 90-Day Guarantee</li>
+          <li>❤️ 1M+ Customers</li>
+        </ul>
+
+        <!-- accordion -->
+        <div class="accordion" id="accordion">
+          <div class="acc">
+            <button class="acc__head">Description <span class="acc__sign">+</span></button>
+            <div class="acc__panel"><p>FÜM is a personal aromatherapy diffuser carved from natural wood.
+              Draw air through a flavored core to interrupt cravings and replace the
+              hand-to-mouth ritual — no nicotine, no vapor, no batteries, no smoke.</p></div>
+          </div>
+          <div class="acc">
+            <button class="acc__head">What's Inside <span class="acc__sign">+</span></button>
+            <div class="acc__panel"><p>FÜM Device + Box, a 30-Day Habit Tracker, 3 Starter Cores,
+              a Cleaning Kit, and a set of beginner-friendly flavors to get you started.</p></div>
+          </div>
+          <div class="acc">
+            <button class="acc__head">Flavors <span class="acc__sign">+</span></button>
+            <div class="acc__panel"><p>Crisp Mint, Raspberry, Orange Zest, Peppermint and more — all made
+              from plant-based, food-grade ingredients.</p></div>
+          </div>
+          <div class="acc">
+            <button class="acc__head">Safety <span class="acc__sign">+</span></button>
+            <div class="acc__panel"><p>No nicotine. No vapor. No combustion. Just essential oils and
+              natural flavoring you breathe in cool, never heated.</p></div>
+          </div>
+          <div class="acc">
+            <button class="acc__head">90-Day Money-Back Guarantee <span class="acc__sign">+</span></button>
+            <div class="acc__panel"><p>Try FÜM risk-free. If it isn't for you, send it back within 90 days
+              for a full refund — even if the box is open.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!--  VIDEO                                                     -->
+    <!-- ========================================================= -->
+    <section class="video container" id="how">
+      <div class="video__frame ph ph--video" data-label="Brand video">
+        <button class="video__play" aria-label="Play video">
+          <svg viewBox="0 0 24 24" width="34" height="34" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        </button>
+        <span class="video__cap">Watch Before You Buy</span>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!--  YOUR PACK INCLUDES                                        -->
+    <!-- ========================================================= -->
+    <section class="includes container" id="includes">
+      <div class="includes__copy">
+        <h2 class="h2">Your pack includes… <span class="script">the good stuff</span></h2>
+        <ul class="checklist">
+          <li>FÜM Device + Box</li>
+          <li>30-Day Habit Tracker</li>
+          <li>3 Starter Cores</li>
+          <li>Cleaning Kit + Extras</li>
+          <li>Beginner-Friendly Flavors</li>
+        </ul>
+        <div class="includes__note">3 Cores Per Pack</div>
+      </div>
+
+      <div class="includes__visual">
+        <div class="goodbox ph ph--box" data-label="Open kit / 'Welcome to the good side' box">
+          <span class="goodbox__head">Welcome to<br>the Good Side</span>
+        </div>
+        <span class="sticker sticker--mint">Crisp Mint</span>
+        <span class="sticker sticker--rasp">Raspberry</span>
+        <span class="sticker sticker--fum">FÜM</span>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!--  LIFESTYLE BANNER                                          -->
+    <!-- ========================================================= -->
+    <section class="banner ph ph--couch" data-label="Lifestyle — couple relaxing on a couch" id="story"></section>
+
+    <!-- ========================================================= -->
+    <!--  FEATURES TRIPTYCH                                         -->
+    <!-- ========================================================= -->
+    <section class="features container">
+      <div class="features__media">
+        <div class="ph ph--device device-shot" data-label="Device close-up"></div>
+        <ul class="callouts">
+          <li class="callout callout--1">
+            <strong>Chewable</strong>
+            <span>A soft tip gives you something to bite during trigger moments.</span>
+          </li>
+          <li class="callout callout--2">
+            <strong>Flavor</strong>
+            <span>Subtle menthol mimics a real throat hit — minus the smoke.</span>
+          </li>
+          <li class="callout callout--3">
+            <strong>Fidgety</strong>
+            <span>Keeps restless hands busy — an outlet for nervous energy.</span>
+          </li>
+          <li class="callout callout--4">
+            <strong>Distraction</strong>
+            <span>Designed to interrupt and redirect your craving patterns.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="features__copy">
+        <h2 class="h2">Stop <span class="script">"ignoring"</span> the habit</h2>
+        <p>Your brain is wired to repeat habits. FÜM is a behavioral tool that distracts you
+          from your cravings — without the nicotine.</p>
+        <div class="pills">
+          <span class="pill">Doctor Backed</span>
+          <span class="pill">Naturally Sourced</span>
+          <span class="pill pill--on">Doctor Recommended</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!--  NO BATTERIES / DIAGRAM                                    -->
+    <!-- ========================================================= -->
+    <section class="diagram container">
+      <div class="diagram__copy">
+        <h2 class="h2">No batteries<br>or vapor?</h2>
+        <p>Just your own breath drawing air through naturally infused flavor cores —
+          giving you a subtle taste without nasty vapor or batteries to charge.</p>
+        <div class="spec ph ph--diagram" data-label="Cutaway diagram of the FÜM inhaler">
+          <span class="spec__measure">⟵ 4.7" ⟶</span>
+        </div>
+      </div>
+      <div class="diagram__photo ph ph--hand" data-label="Device held in hand"></div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!--  COST COMPARISON (dark)                                    -->
+    <!-- ========================================================= -->
+    <section class="cost">
+      <div class="container cost__inner">
+        <div class="cost__photo ph ph--smoker" data-label="Lifestyle photo"></div>
+        <div class="cost__panel">
+          <h2 class="h2 h2--light">Not quitting is<br>too expensive</h2>
+          <ul class="bars">
+            <li class="bar">
+              <span class="bar__label">🚬 Cigarettes</span>
+              <span class="bar__fill bar__fill--max"><b>$2,000+</b></span>
+            </li>
+            <li class="bar">
+              <span class="bar__label">💨 Vaping</span>
+              <span class="bar__fill bar__fill--mid"><b>$800+</b></span>
+            </li>
+            <li class="bar">
+              <span class="bar__label">🌿 FÜM</span>
+              <span class="bar__fill bar__fill--low"><b>$150</b></span>
+            </li>
+          </ul>
+          <p class="cost__foot">FÜM is so good at helping you quit, you'll eventually quit FÜM too —
+            because that's the whole point.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!--  QUIT FOR GOOD                                             -->
+    <!-- ========================================================= -->
+    <section class="quit container">
+      <div class="quit__media">
+        <div class="ph ph--quit1" data-label="Lifestyle"></div>
+        <div class="ph ph--quit2" data-label="Lifestyle"></div>
+      </div>
+      <div class="quit__copy">
+        <h2 class="h2 h2--xl">Quit vaping<br>for good</h2>
+        <p>Thousands have swapped the vape for a habit they actually feel good about. Your turn.</p>
+        <a href="#top" class="btn-ghost">Start Your Quit Pack</a>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!--  UGC GALLERY                                               -->
+    <!-- ========================================================= -->
+    <section class="ugc">
+      <div class="ugc__row">
+        <div class="ugc__cell ph ph--ugc1" data-label="Customer"></div>
+        <div class="ugc__cell ph ph--ugc2" data-label="Customer"></div>
+        <div class="ugc__cell ph ph--ugc3" data-label="Customer"></div>
+        <div class="ugc__cell ph ph--ugc4" data-label="Customer"></div>
+        <div class="ugc__cell ph ph--ugc5" data-label="Customer"></div>
+        <div class="ugc__cell ph ph--ugc6" data-label="Customer"></div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!--  STICKY STATEMENT                                          -->
+    <!-- ========================================================= -->
+    <section class="statement container">
+      <h2 class="statement__txt">
+        We're here to stick with you.<br>
+        <span class="statement__blue">Not to your lungs.</span>
+      </h2>
+      <div class="statement__core ph ph--core" data-label="Flavor core"></div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!--  REVIEWS                                                   -->
+    <!-- ========================================================= -->
+    <section class="reviews" id="reviews">
+      <div class="container">
+        <div class="reviews__head">
+          <p class="reviews__eyebrow">Trusted by</p>
+          <h2 class="h2 h2--center">1 Million+ <span class="script">Happy Customers</span></h2>
+          <div class="reviews__stars">
+            <span class="stars">★★★★★</span>
+            <span>4.8 average from 17,000+ verified reviews</span>
+          </div>
+        </div>
+
+        <div class="masonry" id="masonry">
+          <!-- cards injected by JS (with a static fallback below) -->
+          <noscript>
+            <article class="rev"><div class="rev__top"><span class="rev__avatar">L</span><div><span class="rev__name">Leanne S.</span><span class="stars stars--sm">★★★★★</span></div></div><p>Honestly didn't think a wooden inhaler would do anything. Three weeks in and I haven't touched my vape. The mint one is unreal.</p><span class="rev__verified">✓ Verified Buyer</span></article>
+          </noscript>
+        </div>
+
+        <button class="btn-ghost reviews__more" id="loadMore">Load More Reviews</button>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!--  FINAL CTA                                                 -->
+    <!-- ========================================================= -->
+    <section class="finalcta">
+      <div class="container finalcta__inner">
+        <h2 class="h2 h2--light h2--center">Ready to break up with the vape?</h2>
+        <a href="#top" class="atc atc--inline">Get the Quit Pack — $88.55</a>
+        <p class="finalcta__sub">90-Day Money-Back Guarantee · Free Shipping · Free Mystery Gift</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================================= -->
+  <!--  FOOTER                                                        -->
+  <!-- ============================================================= -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <span class="logo__mark logo__mark--lg">FÜM</span>
+        <p>The good habit. Carved from real wood, powered by nothing but your breath.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="TikTok">TT</a>
+          <a href="#" aria-label="YouTube">YT</a>
+          <a href="#" aria-label="Facebook">FB</a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h4>Shop</h4>
+        <a href="#">Quit Pack</a>
+        <a href="#">Flavors</a>
+        <a href="#">Refill Cores</a>
+        <a href="#">Accessories</a>
+        <a href="#">Gift Cards</a>
+      </div>
+      <div class="footer__col">
+        <h4>Learn</h4>
+        <a href="#">How It Works</a>
+        <a href="#">Our Story</a>
+        <a href="#">The Science</a>
+        <a href="#">Blog</a>
+      </div>
+      <div class="footer__col">
+        <h4>Support</h4>
+        <a href="#">FAQ</a>
+        <a href="#">Shipping</a>
+        <a href="#">Returns</a>
+        <a href="#">Contact</a>
+      </div>
+
+      <div class="footer__news">
+        <h4>Join the good side</h4>
+        <p>Get 10% off your first order &amp; the occasional good-news email.</p>
+        <form class="news" onsubmit="return false">
+          <input type="email" placeholder="you@email.com" aria-label="Email" />
+          <button type="submit">Join</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <span>© 2026 FÜM. All rights reserved. This is a design demo — not a real store.</span>
+      <div class="pay">
+        <span class="pay__card">VISA</span>
+        <span class="pay__card">MC</span>
+        <span class="pay__card">AMEX</span>
+        <span class="pay__card">PayPal</span>
+        <span class="pay__card">Pay</span>
+        <span class="pay__card">G Pay</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
